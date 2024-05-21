@@ -7,7 +7,8 @@ export default function Home() {
         <div className="flex-col items-center my-2 sm:space-x-2 justify-center text-center">
           <p className="text-5xl font-bold space-x-2">
             <span>Just your typical</span>
-            <span className=" bg-gradient-to-r from-blue-400 via-pink-400 to-blue-400 inline-block text-transparent bg-clip-text text-5xl font-bold">
+            <span className=" bg-gradient-to-r from-[#5BCEFA] via-[#F5A9B8] to-[#5BCEFA] hover:from-[#D60270] hover:via-[#9B4F96] hover:to-[#0038A8]
+            inline-block text-transparent bg-clip-text text-5xl font-bold">
               Transfem
             </span>
           </p>
