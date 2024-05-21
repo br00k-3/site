@@ -8,7 +8,7 @@ export default function resume() {
           <p>
             PDF copy can be found{" "}
             <Link href="/resume.pdf" className="text-zinc-400 underline">
-              Here
+              here
             </Link>
           </p>
         </div>

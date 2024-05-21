@@ -29,7 +29,8 @@ export function Navbar() {
             <div className="hidden sm:block">
                 <div className="h-4 bg-white dark:bg-zinc-900" />
             </div>
-            <nav className="mx-auto flex bg-zinc-400/70 dark:bg-zinc-800/70 h-16 w-full backdrop-blur-md items-center justify-between space-x-3 sm:rounded-full px-4">
+            <div className="mx-0 sm:mx-16 xl:mx-48">
+            <nav className="mx-auto flex bg-zinc-300/70 dark:bg-zinc-800/70 h-16 w-full backdrop-blur-md items-center justify-between space-x-3 sm:rounded-full px-4">
                 <div>
                     <Link
                         href="/"
@@ -113,6 +114,7 @@ export function Navbar() {
                     </DropdownMenu>
                 </div>
             </nav>
+            </div>
         </div>
     );
 }
