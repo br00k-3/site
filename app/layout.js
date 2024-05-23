@@ -3,6 +3,8 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { GeistSans } from "geist/font/sans"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Brooke Milberg",
@@ -25,6 +27,8 @@ export default function RootLayout({ children }) {
             <main className="h-full w-screen">{children}</main>
             </div>
             <Footer/>
+            <Analytics />
+            <SpeedInsights />
             </div>
         </ThemeProvider>
       </body>
