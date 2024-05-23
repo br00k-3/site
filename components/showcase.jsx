@@ -71,7 +71,7 @@ export function Showcase() {
             >
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>{image.title}</DialogTitle>
+                  <DialogTitle className="mb-1">{image.title}</DialogTitle>
                   <DialogDescription>
                     <Image
                       className=""

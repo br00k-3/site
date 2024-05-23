@@ -10,10 +10,10 @@ export function Navbar() {
     return (
         <div className="w-full fixed left-0 top-0 z-40">
             <div className="hidden sm:block">
-                <div className="h-4 bg-white dark:bg-zinc-900" />
+                <div className="h-4" />
             </div>
-            <div className="mx-0 sm:mx-16 xl:mx-48">
-                <nav className="mx-auto flex bg-zinc-100/70 dark:bg-zinc-800/70 h-16 w-full backdrop-blur-md items-center justify-between space-x-3 sm:rounded-full px-4">
+            <div className="mx-0 sm:mx-4 md:mx-16 xl:mx-48">
+                <nav className="mx-auto flex bg-zinc-100/70 dark:bg-zinc-900/70 h-16 w-full backdrop-blur-md items-center justify-between space-x-3 sm:rounded-full px-4">
                     <div>
                         <Link
                             href="/"
@@ -27,7 +27,7 @@ export function Navbar() {
                                 alt="Icon"
                                 quality={100}
                             />
-                            <span className="hover:text-red-600 transition duration-250 text-center text-2xl font-semibold">
+                            <span className="hover:text-red-600 transition text-nowrap duration-250 text-center text-2xl font-semibold">
                                 Brooke Milberg
                             </span>
                         </Link>

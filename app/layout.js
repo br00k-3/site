@@ -14,16 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="flex-col h-full w-screen overflow-x-hidden">
+      <body className="flex-col h-full w-screen overflow-x-hidden bg-white dark:bg-black">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-white w-full dark:bg-zinc-900">
+          <div>
             <Navbar />
-            <div className="pt-28 dark:bg-zinc-900">
+            <div className="pt-28">
             <main className="h-full w-screen">{children}</main>
             </div>
             <Footer/>

@@ -33,7 +33,7 @@ export function MobileNav() {
         <div>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="icon" className="rounded-lg dark:bg-zinc-900">
+                    <Button variant="outline" size="icon" className="rounded-lg dark:bg-black">
                         <MenuIcon className="h-6 w-6" />
                     </Button>
                 </DropdownMenuTrigger>
