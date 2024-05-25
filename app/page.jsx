@@ -3,7 +3,7 @@ import { Studioskills } from "@/components/studioskills"
 
 export default function Home() {
   return (
-    <div className="xl:mx-56 mx-4 mb-4">
+    <div className="xl:mx-56 md:mx-20 sm:mx-8 mx-4">
         <div className="flex-col items-center my-2 sm:space-x-2 justify-center text-center">
           <p className="text-5xl font-bold space-x-2">
             <span>Just your typical</span>

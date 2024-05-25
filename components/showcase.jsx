@@ -27,7 +27,7 @@ export function Showcase() {
   return (
     <div>
       <div>
-        <div className="flex items-start justify-center space-x-2 md:space-x-6 mt-10">
+        <div className="flex items-start justify-center space-x-2 md:space-x-6">
           <div className="flex-col justify-center content-start">
             {firstHalf.map(showcaseItem => (
               <div key={showcaseItem.title}>

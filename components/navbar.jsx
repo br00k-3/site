@@ -33,7 +33,7 @@ export function Navbar() {
                         </Link>
                     </div>
                     <div className="hidden sm:block">
-                        <div className="justify-right text-xl flex items-center font-semibold space-x-3">
+                        <div className="justify-right text-xl flex items-center font-semibold text-nowrap space-x-3">
                             <Link
                                 href="/resume"
                                 className="hover:text-red-600 transition duration-250"
@@ -45,6 +45,12 @@ export function Navbar() {
                                 className="hover:text-red-600 transition duration-250"
                             >
                                 Showcase
+                            </Link>
+                            <Link
+                                href="/listening-stats"
+                                className="hover:text-red-600 transition duration-250"
+                            >
+                                Music Stats
                             </Link>
                             <ThemeSwitcher />
                         </div>
