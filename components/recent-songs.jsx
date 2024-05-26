@@ -1,14 +1,5 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
@@ -41,10 +32,10 @@ export default function RecentSongs() {
         >
           {songData ? (
             <div className="flex h-full w-full items-center justify-between px-4 space-x-4">
-              <div className="flex justify-start items-center shrink-0 space-x-4 w-64 lg:w-72">
-                <div className="shrink-0">
+              <div className="flex md:justify-start space-x-4 w-2/3">
+                <div className="shrink-0 self-center">
                   <img
-                    className=" h-12 w-12"
+                    className=" h-10 w-10 md:h-12 md:w-12"
                     src={songData.image[3]["#text"]}
                     height={250}
                     width={250}
@@ -53,22 +44,22 @@ export default function RecentSongs() {
                     quality={100}
                   />
                 </div>
-                <div>
-                  <Link
-                    href={songData.url}
-                    className="text-red-600 text-lg font-semibold underline"
-                  >
-                    {songData.name}
-                  </Link>
+                <div className="flex flex-col md:flex-row justify-center items-start">
+                  <div className="w-64 md:self-center">
+                    <Link
+                      href={songData.url}
+                      className="text-red-600 text-xs md:text-lg text-start font-semibold underline"
+                    >
+                      {songData.name}
+                    </Link>
+                  </div>
+                  <div className="flex md:w-40 lg:w-64 text-zinc-400 shrink-1 text-xs lg:text-lg md:self-center font-semibold">
+                    {songData.artist["#text"]}
+                  </div>
                 </div>
               </div>
-              <div className="hidden md:block">
-              <div className="flex md:w-40 lg:w-64 text-zinc-400 shrink-1 text-md font-semibold">
-                {songData.artist["#text"]}
-              </div>
-                </div>
-              <div className="justify-end">
-                <div className="w-36 h-auto text-end text-sm">
+              <div className="justify-end hidden sm:block">
+                <div className="w-36 h-auto text-end text-xs">
                   {songData["@attr"]?.nowplaying ? (
                     <span className="text-wrap">Now Playing</span>
                   ) : (
