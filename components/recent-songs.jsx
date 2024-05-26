@@ -28,11 +28,11 @@ export default function RecentSongs() {
       {recentSongs?.map((songData) => (
         <div
           key={songData}
-          className=" bg-zinc-200/70 dark:bg-zinc-900/70 h-16 w-full border border-white dark:border-black"
+          className=" bg-zinc-200/70 dark:bg-zinc-900/70 hover:bg-zinc-300/70 dark:hover:bg-zinc-800/70 transition duration-125 h-16 w-full my-1"
         >
           {songData ? (
-            <div className="flex h-full w-full items-center justify-between px-4 space-x-4">
-              <div className="flex md:justify-start space-x-4 w-2/3">
+            <div className="flex h-full w-full  items-center justify-between px-2">
+              <div className="flex md:justify-start space-x-4">
                 <div className="shrink-0 self-center">
                   <img
                     className=" h-10 w-10 md:h-12 md:w-12"
@@ -44,16 +44,16 @@ export default function RecentSongs() {
                     quality={100}
                   />
                 </div>
-                <div className="flex flex-col md:flex-row justify-center items-start">
-                  <div className="w-64 md:self-center">
+                <div className="flex flex-col md:flex-row justify-center w-full items-start">
+                  <div className="w-64 lg:w-96 md:self-center">
                     <Link
                       href={songData.url}
-                      className="text-red-600 text-xs md:text-lg text-start font-semibold underline"
+                      className="text-red-600 text-xs md:text-md lg:text-lg text-start font-semibold underline"
                     >
                       {songData.name}
                     </Link>
                   </div>
-                  <div className="flex md:w-40 lg:w-64 text-zinc-400 shrink-1 text-xs lg:text-lg md:self-center font-semibold">
+                  <div className="flex md:w-40 lg:w-64 2xl:w-max text-zinc-400 text-xs lg:text-lg md:self-center font-semibold">
                     {songData.artist["#text"]}
                   </div>
                 </div>

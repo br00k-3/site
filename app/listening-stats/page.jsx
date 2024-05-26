@@ -8,7 +8,7 @@ export default function page() {
       <p className="text-3xl font-semibold">Music Stats</p>
       <p className="text-zinc-400">Data taken from Last.fm</p>
       Recent listens
-      <div className="w-full md:w-auto">
+      <div className="w-full mt-1 md:w-auto">
         <RecentSongs />
       </div>
     </div>
