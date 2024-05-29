@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
@@ -33,16 +39,24 @@ export default function RecentSongs() {
           {songData ? (
             <div className="flex h-full w-full  items-center justify-between px-2">
               <div className="flex md:justify-start space-x-4">
-                <div className="shrink-0 self-center">
+                <div className="shrink-0">
+                <TooltipProvider className="shrink-0 self-center">
+                  <Tooltip>
+                    <TooltipTrigger>
                   <img
                     className=" h-10 w-10 md:h-12 md:w-12"
                     src={songData.image[3]["#text"]}
                     height={250}
                     width={250}
-                    alt={songData.image["#text"]}
-                    title={songData.image[3]["#text"]}
+                    alt={songData.album["#text"]}
                     quality={100}
                   />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                  {songData.album["#text"]}
+                  </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center w-full items-start">
                   <div className="w-64 lg:w-96 md:self-center">
