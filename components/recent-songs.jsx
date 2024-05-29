@@ -6,15 +6,32 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
+
 
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
   const recentSongs = songData;
+  var [pageNumber = 1, setPageNumber] = useState();
 
+  function decreasePageNumber() {
+    --pageNumber;
+  }
+  function increasePageNumber() {
+    ++pageNumber;
+  }
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
     const url =
-      "https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=a913164493401f53c8d45663376ac493&limit=10&format=json";
+      `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=a913164493401f53c8d45663376ac493&limit=10&page=${pageNumber}&format=json`;
 
     fetch(url)
       .then((response) => response.json())
@@ -31,6 +48,23 @@ export default function RecentSongs() {
 
   return (
     <div className="flex-col flex-wrap items-center justify-center">
+<div className="flex gap-4 items-center justify-between">
+  <div>
+  Recent Listens
+  </div>
+<div>
+          <Pagination>
+      <PaginationContent>
+        <PaginationItem>
+          <PaginationPrevious onClick={decreasePageNumber} />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationNext onClick={increasePageNumber} />
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
+          </div>
+</div>
       {recentSongs?.map((songData) => (
         <div
           key={songData}

@@ -11,6 +11,7 @@ export const metadata = {
   description: "What am I?"
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={GeistSans.className}>

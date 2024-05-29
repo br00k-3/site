@@ -7,7 +7,6 @@ export default function page() {
     <div className="xl:mx-56 md:mx-20 sm:mx-8 mx-4">
       <p className="text-3xl font-semibold">Music Stats</p>
       <p className="text-zinc-400">Data taken from Last.fm</p>
-      Recent listens
       <div className="w-full mt-1 md:w-auto">
         <RecentSongs />
       </div>
