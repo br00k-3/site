@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
@@ -9,9 +10,7 @@ import {
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
-  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
@@ -20,14 +19,15 @@ import {
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
   const recentSongs = songData;
-  var [pageNumber, setPageNumber] = useState();
-  pageNumber = 1;
+  var [pageNumber, setPageNumber] = useState(1);
 
   function decreasePageNumber() {
-    pageNumber -= 1;
+    setPageNumber(pageNumber -= 1);
+    setSongData();
   }
   function increasePageNumber() {
-    pageNumber += 1;
+    setPageNumber(pageNumber += 1);
+    setSongData();
   }
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
@@ -56,10 +56,10 @@ export default function RecentSongs() {
 <div>
           <Pagination>
       <PaginationContent>
-        <PaginationItem>
+        <PaginationItem className="cursor-pointer">
           <PaginationPrevious onClick={() => decreasePageNumber()} />
         </PaginationItem>
-        <PaginationItem>
+        <PaginationItem className="cursor-pointer">
           <PaginationNext onClick={() => increasePageNumber()} />
         </PaginationItem>
       </PaginationContent>
