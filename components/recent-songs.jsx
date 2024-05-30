@@ -20,13 +20,14 @@ import {
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
   const recentSongs = songData;
-  var [pageNumber = 1, setPageNumber] = useState();
+  var [pageNumber, setPageNumber] = useState();
+  pageNumber = 1;
 
   function decreasePageNumber() {
-    --pageNumber;
+    pageNumber -= 1;
   }
   function increasePageNumber() {
-    ++pageNumber;
+    pageNumber += 1;
   }
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
@@ -56,10 +57,10 @@ export default function RecentSongs() {
           <Pagination>
       <PaginationContent>
         <PaginationItem>
-          <PaginationPrevious onClick={decreasePageNumber} />
+          <PaginationPrevious onClick={() => decreasePageNumber()} />
         </PaginationItem>
         <PaginationItem>
-          <PaginationNext onClick={increasePageNumber} />
+          <PaginationNext onClick={() => increasePageNumber()} />
         </PaginationItem>
       </PaginationContent>
     </Pagination>
