@@ -26,9 +26,6 @@ export default function RecentSongs() {
       setPageNumber((pageNumber -= 1));
     }
   }
-  function resetPageNumber() {
-    setPageNumber((pageNumber = 1));
-  }
   function increasePageNumber() {
     setPageNumber((pageNumber += 1));
   }
@@ -60,8 +57,8 @@ export default function RecentSongs() {
                 <PaginationPrevious onClick={decreasePageNumber} />
               </PaginationItem>
               <PaginationItem className="cursor-pointer">
-                <PaginationLink isActive onClick={resetPageNumber}>
-                  1
+                <PaginationLink isActive>
+                  {pageNumber}
                 </PaginationLink>
               </PaginationItem>
               <PaginationItem className="cursor-pointer">
