@@ -4,19 +4,14 @@ import Link from "next/link";
 export function Hero() {
     return (
         <div className="flex-col text-center w-full">
-            <div className="flex text-6xl font-bold text-center w-full space-x-2">
-                <div className='flex justify-between items-center'>
-                    A sound tech, with a passion
-                </div>
-                <div>
-                    <Link href="/">
+            <div className="text-6xl font-bold text-center w-full">
+                <span>A sound tech, with a passion </span>
+                <span className='inline-block'><Link href="/">
                     <Lottie className="h-14" src="https://cdn.lottielab.com/l/AmAm8tW1DFV4sg.json" autoplay />
-                    </Link>
-                </div>
-               
+                    </Link></span>      
             </div>
             <div className="text-2xl text-zinc-400 font-semibold">
-                Theatre tech based in Portland Oregon
+                Theatre technician based in Portland Oregon
             </div>
         </div>
     )
