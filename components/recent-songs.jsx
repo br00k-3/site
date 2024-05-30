@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
@@ -9,30 +10,31 @@ import {
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination"
-
+} from "@/components/ui/pagination";
 
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
   const recentSongs = songData;
-  var [pageNumber, setPageNumber] = useState();
-  pageNumber = 1;
+  var [pageNumber, setPageNumber] = useState(1);
 
   function decreasePageNumber() {
-    pageNumber -= 1;
+    if (pageNumber > 1) {
+      setPageNumber((pageNumber -= 1));
+    }
+  }
+  function resetPageNumber() {
+    setPageNumber((pageNumber = 1));
   }
   function increasePageNumber() {
-    pageNumber += 1;
+    setPageNumber((pageNumber += 1));
   }
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
-    const url =
-      `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=a913164493401f53c8d45663376ac493&limit=10&page=${pageNumber}&format=json`;
+    const url = `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=a913164493401f53c8d45663376ac493&limit=10&page=${pageNumber}&format=json`;
 
     fetch(url)
       .then((response) => response.json())
@@ -45,27 +47,30 @@ export default function RecentSongs() {
       .catch((error) => {
         console.error("error while fetching data", error);
       });
-  }, []); // empty array at the end would be used to add dependencies, and, if they're changed, react will rerun this code when the values of the dpendencies change.
+  }, [pageNumber]); // empty array at the end would be used to add dependencies, and, if they're changed, react will rerun this code when the values of the dpendencies change.
 
   return (
     <div className="flex-col flex-wrap items-center justify-center">
-<div className="flex gap-4 items-center justify-between">
-  <div>
-  Recent Listens
-  </div>
-<div>
+      <div className="flex gap-4 items-center justify-between">
+        <div>Recent Listens</div>
+        <div>
           <Pagination>
-      <PaginationContent>
-        <PaginationItem>
-          <PaginationPrevious onClick={() => decreasePageNumber()} />
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationNext onClick={() => increasePageNumber()} />
-        </PaginationItem>
-      </PaginationContent>
-    </Pagination>
-          </div>
-</div>
+            <PaginationContent>
+              <PaginationItem className="cursor-pointer">
+                <PaginationPrevious onClick={decreasePageNumber} />
+              </PaginationItem>
+              <PaginationItem className="cursor-pointer">
+                <PaginationLink isActive onClick={resetPageNumber}>
+                  1
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem className="cursor-pointer">
+                <PaginationNext onClick={increasePageNumber} />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
+      </div>
       {recentSongs?.map((songData) => (
         <div
           key={songData}
@@ -75,23 +80,21 @@ export default function RecentSongs() {
             <div className="flex h-full w-full  items-center justify-between px-2">
               <div className="flex md:justify-start space-x-4">
                 <div className="shrink-0">
-                <TooltipProvider className="shrink-0 self-center">
-                  <Tooltip>
-                    <TooltipTrigger>
-                  <img
-                    className=" h-10 w-10 md:h-12 md:w-12"
-                    src={songData.image[3]["#text"]}
-                    height={250}
-                    width={250}
-                    alt={songData.album["#text"]}
-                    quality={100}
-                  />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                  {songData.album["#text"]}
-                  </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
+                  <TooltipProvider className="shrink-0 self-center">
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <img
+                          className=" h-10 w-10 md:h-12 md:w-12"
+                          src={songData.image[3]["#text"]}
+                          height={250}
+                          width={250}
+                          alt={songData.album["#text"]}
+                          quality={100}
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent>{songData.album["#text"]}</TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
                 <div className="flex flex-col md:flex-row justify-center w-full items-start">
                   <div className="w-64 lg:w-96 md:self-center">
@@ -124,4 +127,4 @@ export default function RecentSongs() {
       ))}
     </div>
   );
-}
+};
