@@ -1,16 +1,15 @@
-import "./globals.css"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { GeistSans } from "geist/font/sans"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import "./globals.css";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { GeistSans } from "geist/font/sans";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Brooke Milberg",
-  description: "What am I?"
+  description: "What am I?",
 };
-
 
 export default function RootLayout({ children }) {
   return (
@@ -25,12 +24,16 @@ export default function RootLayout({ children }) {
           <div>
             <Navbar />
             <div className="pt-28">
-            <main className="h-full w-screen">{children}</main>
+              <main className="h-full w-screen">
+                <div className="mx-0 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8">
+                  {children}
+                </div>
+              </main>
             </div>
-            <Footer/>
+            <Footer />
             <Analytics />
             <SpeedInsights />
-            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>

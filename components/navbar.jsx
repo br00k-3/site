@@ -8,7 +8,7 @@ import { MobileNav } from "@/components/mobile-nav";
 export function Navbar() {
 
     return (
-        <div className="w-full fixed left-0 top-0 z-40">
+        <div className="w-full sticky left-0 top-0 z-40">
             <div className="hidden sm:block">
                 <div className="h-4 bg-white dark:bg-black" />
             </div>

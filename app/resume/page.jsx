@@ -2,8 +2,7 @@ import Link from "next/link"
 
 export default function resume() {
   return (
-    <div className="w-full flex-col overflow-x-hidden">
-      <div className="xl:mx-56 md:mx-20 sm:mx-8 mx-4">
+    <div>
         <div className="text-center">
           <p>
             PDF copy can be found{" "}
@@ -15,7 +14,7 @@ export default function resume() {
         <div className="text-center">
           <p className="text-3xl font-bold">Brooke Milberg</p>
           <p className=""> Portland OR</p>
-          <p className="">rheamilberg@gmail.com</p>
+          <p className="">brookemilberg@gmail.com</p>
         </div>
         <div className="text-left mt-5">
           <p className="text-2xl font-semibold">Education</p>
@@ -101,6 +100,6 @@ export default function resume() {
           </div>
         </div>
       </div>
-    </div>
+
   )
 }
