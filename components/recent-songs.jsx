@@ -19,6 +19,7 @@ import {
 export default function RecentSongs() {
   const [songData, setSongData] = useState(); // this makes it so that the component is re-rendered when the variable songData changes, very cool stuff (technical react alalala)
   const recentSongs = songData;
+  const [inputtedPageNUmber, setInputtedPageNumber] = useState()
   var [pageNumber, setPageNumber] = useState(1);
 
   function decreasePageNumber() {
@@ -58,7 +59,7 @@ export default function RecentSongs() {
               </PaginationItem>
               <PaginationItem className="cursor-pointer">
                 <PaginationLink isActive>
-                  {pageNumber}
+                  <input value={inputtedPageNUmber} onChange={(e) => setPageNumber(e.target.value)} onBlur={(e) => e.target.value = "" || !e.target.value && setInputtedPageNumber(pageNumber)} className="w-10 h-10 text-center bg-transparent" defaultValue={pageNumber}></input>
                 </PaginationLink>
               </PaginationItem>
               <PaginationItem className="cursor-pointer">
