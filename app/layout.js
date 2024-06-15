@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         >
           <div>
             <Navbar />
-            <div className="pt-28">
+            <div className="pt-4">
               <main className="h-full w-screen">
                 <div className="mx-0 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8">
                   {children}
