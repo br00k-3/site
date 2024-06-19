@@ -30,6 +30,7 @@ export default function RecentSongs() {
   function increasePageNumber() {
     setPageNumber((pageNumber += 1));
   }
+
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
     const url = `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=a913164493401f53c8d45663376ac493&limit=10&page=${pageNumber}&format=json`;
@@ -49,8 +50,8 @@ export default function RecentSongs() {
 
   return (
     <div className="flex-col flex-wrap items-center justify-center">
-      <div className="flex gap-4 items-center justify-between">
-        <div>Recent Listens</div>
+      <div className="flex items-center justify-between">
+        <div>The last 10 songs I listened to</div>
         <div>
           <Pagination>
             <PaginationContent>
@@ -59,7 +60,7 @@ export default function RecentSongs() {
               </PaginationItem>
               <PaginationItem className="cursor-pointer">
                 <PaginationLink isActive>
-                  <input value={inputtedPageNUmber} onChange={(e) => setPageNumber(e.target.value)} onBlur={(e) => e.target.value = "" || !e.target.value && setInputtedPageNumber(pageNumber)} className="w-10 h-10 text-center bg-transparent" defaultValue={pageNumber}></input>
+                  <input value={inputtedPageNUmber} onChange={(e) => setPageNumber(e.target.value)} className="w-10 h-10 text-center bg-transparent" defaultValue={pageNumber}></input>
                 </PaginationLink>
               </PaginationItem>
               <PaginationItem className="cursor-pointer">
