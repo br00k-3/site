@@ -33,6 +33,18 @@ export default function ListeningTrends() {
       });
   }, []); // empty array at the end would be used to add dependencies, and, if they're changed, react will rerun this code when the values of the dpendencies change.
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip bg-zinc-200/90 dark:bg-zinc-900/90 p-2 rounded-lg">
+          <p className="label">{`${label} : ${payload[0].value}`}</p>
+        </div>
+      );
+    }
+  
+    return null;
+  };
+
   return (
     <div className="flex-col flex-wrap items-center justify-center">
             <div>The top 10 artists I listen to</div>
@@ -40,9 +52,9 @@ export default function ListeningTrends() {
       <BarChart width={1500} height={500} data={artistData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" className="text-xs"/>
-        <YAxis />
-        <Tooltip />
-        <Bar name="artists" dataKey="playcount" fill="#8884d8" />
+        <YAxis className="text-xs" width={30}/>
+        <Tooltip content={<CustomTooltip />} />
+        <Bar name="artists" dataKey="playcount" fill="#dc2626"/>
       </BarChart>
       </ResponsiveContainer>
     </div>
