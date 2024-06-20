@@ -10,7 +10,7 @@ export function Hero() {
         </span>
       </div>
       <div className="text-2xl text-zinc-400 font-semibold">
-        Theatre technician based in Portland Oregon
+        Theatre Technician Based In Portland, Oregon
       </div>
     </div>
   );

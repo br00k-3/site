@@ -45,7 +45,7 @@ export function MobileNav() {
           <DropdownMenuItem>
             <Link
               href="/resume"
-              className="hover:text-red-600 transition duration-250"
+              className="hover:text-fuchsia-600 transition duration-250"
             >
               Resume
             </Link>
@@ -53,7 +53,7 @@ export function MobileNav() {
           <DropdownMenuItem>
             <Link
               href="/showcase"
-              className="hover:text-red-600 transition duration-250"
+              className="hover:text-fuchsia-600 transition duration-250"
             >
               Showcase
             </Link>
@@ -61,7 +61,7 @@ export function MobileNav() {
           <DropdownMenuItem>
             <Link
               href="/listening-stats"
-              className="hover:text-red-600 transition duration-250"
+              className="hover:text-fuchsia-600 transition duration-250"
             >
               Music Stats
             </Link>

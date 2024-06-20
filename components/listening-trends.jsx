@@ -53,7 +53,7 @@ export default function ListeningTrends() {
         <XAxis dataKey="name" className="text-xs"/>
         <YAxis className="text-xs" width={25}/>
         <Tooltip content={<CustomTooltip />} />
-        <Bar name="artists" dataKey="playcount" fill="#dc2626"/>
+        <Bar name="artists" dataKey="playcount" className="fill-fuchsia-600"/>
       </BarChart>
       </ResponsiveContainer>
     </div>

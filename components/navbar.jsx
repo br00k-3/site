@@ -20,14 +20,14 @@ export function Navbar() {
                             className="flex items-center space-x-3 rtl:space-x-reverse"
                         >
                             <Image
-                                className="border-2 border-red-600 rounded-full hover:animate-spin h-9 w-9"
+                                className="border-2 border-fuchsia-600 rounded-full hover:animate-spin h-9 w-9"
                                 src="/images/icon.png"
                                 width="250"
                                 height="250"
                                 alt="Icon"
                                 quality={100}
                             />
-                            <span className="bg-gradient-to-r from-red-600 to-blue-600 inline-block text-transparent bg-clip-text text-nowrap text-center text-2xl font-semibold">
+                            <span className="bg-gradient-to-r from-fuchsia-600 to-cyan-500 inline-block text-transparent bg-clip-text text-nowrap text-center text-2xl font-semibold">
                                 Brooke Milberg
                             </span>
                         </Link>
@@ -36,19 +36,19 @@ export function Navbar() {
                         <div className="justify-right text-xl flex items-center font-semibold text-nowrap space-x-3">
                             <Link
                                 href="/resume"
-                                className="hover:text-red-600 transition duration-250"
+                                className="hover:text-fuchsia-600 transition duration-250"
                             >
                                 Resume
                             </Link>
                             <Link
                                 href="/showcase"
-                                className="hover:text-red-600 transition duration-250"
+                                className="hover:text-fuchsia-600 transition duration-250"
                             >
                                 Showcase
                             </Link>
                             <Link
                                 href="/listening-stats"
-                                className="hover:text-red-600 transition duration-250"
+                                className="hover:text-fuchsia-600 transition duration-250"
                             >
                                 Music Stats
                             </Link>
