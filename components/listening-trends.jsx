@@ -9,7 +9,6 @@ import {
   Bar,
 } from "recharts";
 import { useState, useEffect } from "react";
-import { mockData } from "@/lib/data";
 
 export default function ListeningTrends() {
   const [artistData, setArtistData] = useState();
@@ -48,11 +47,11 @@ export default function ListeningTrends() {
   return (
     <div className="flex-col flex-wrap items-center justify-center">
             <div>The top 10 artists I listen to</div>
-      <ResponsiveContainer width="100%" aspect={3}>
-      <BarChart width={1500} height={500} data={artistData}>
+      <ResponsiveContainer width="100%" aspect={2.5}>
+      <BarChart width={1000} height={1000} data={artistData}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" className="text-xs"/>
-        <YAxis className="text-xs" width={30}/>
+        <YAxis className="text-xs" width={25}/>
         <Tooltip content={<CustomTooltip />} />
         <Bar name="artists" dataKey="playcount" fill="#dc2626"/>
       </BarChart>
