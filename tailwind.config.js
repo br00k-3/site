@@ -104,7 +104,7 @@ module.exports = {
             textShadow: "1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 1px",
           },
           "30%": {
-            textShadow: "0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 px",
+            textShadow: "0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 2px",
           },
           "35%": {
             textShadow: "3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 1px",
@@ -159,13 +159,13 @@ module.exports = {
         },
       },
       animation: {
-        flicker: "flicker 1.5s infinite",
+        flicker: "flicker .1s infinite",
         crt: "crt 3s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backdropBlur: {
-        xs: '.5px',
+      blur: {
+        xs: '.75px',
       },
     },
   },
