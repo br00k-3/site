@@ -119,7 +119,7 @@ module.exports = {
             textShadow: "0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px",
           },
           "55%": {
-            textShadow: "2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px",
+            textShadow: "2.3758461067427541px 0 1px rgba(0,30,255,0.5), -2.3758461067427541px 0 1px rgba(255,0,80,0.3), 0 0 3px",
           },
           "60%": {
             textShadow: "2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px",
@@ -146,7 +146,7 @@ module.exports = {
             textShadow: "2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px",
           },
           "100%": {
-            textShadow: "2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px",
+            textShadow: "2.6208764473832511px 0 1px rgba(0,30,255,0.5), -2.6208764473832511px 0 1px rgba(255,0,80,0.3), 0 0 3px",
           }
         },
         "accordion-down": {
@@ -159,13 +159,13 @@ module.exports = {
         },
       },
       animation: {
-        flicker: "flicker 1.5s infinite",
+        flicker: "flicker .1s infinite",
         crt: "crt 3s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backdropBlur: {
-        xs: '.5px',
+      blur: {
+        xs: '.75px',
       },
     },
   },
