@@ -1,3 +1,4 @@
+"use client";
 import localFont from "next/font/local";
 
 const myFont = localFont({ src: "./nintendoP_DotGothic12-M.otf" });
