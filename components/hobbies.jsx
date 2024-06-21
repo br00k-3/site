@@ -1,6 +1,6 @@
 export default function Hobbies() {
   return (
-    <div className="mx-2 sm:mx-4 md:mx-16 xl:mx-48 px-2 blur-xs sm:px-8 animate-crt">
+    <div className="mx-2 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8 animate-crt">
       <p className="text-6xl pt-10 font-extrabold text-cyan-400">Hello World</p>
       <p className="text-2xl text-green-600 py-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
