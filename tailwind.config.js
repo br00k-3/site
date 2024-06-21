@@ -160,9 +160,12 @@ module.exports = {
       },
       animation: {
         flicker: "flicker 1.5s infinite",
-        crt: "crt 1.6s infinite",
+        crt: "crt 3s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      blur: {
+        xs: '.5px',
       },
     },
   },
