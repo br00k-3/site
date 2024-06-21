@@ -1,8 +1,9 @@
 "use client";
 import Hobbies from "@/components/hobbies";
 import localFont from "next/font/local";
+import { RetroNav } from "@/components/retro-nav";
 
-const myFont = localFont({ src: "./BlitzMain.otf" });
+const myFont = localFont({ src: "./VCR.ttf" });
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
         <div className="bg-black text-center min-h-screen w-full items-center">
           <div className="fixed block left-0 top-0 w-full h-screen z-50 pointer-events-none animate-flicker bg-[rgba(18,16,16,0.1)]" />
           <div className="z-40 bg-fuchsia-900/25 min-h-screen blur-xs">
+          <RetroNav/>
           <Hobbies />
           </div>
         </div>
