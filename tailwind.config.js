@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/textshadow')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
