@@ -63,7 +63,7 @@ export default function RecentSongs() {
                   <input
                     value={inputtedPageNUmber}
                     onChange={(e) => setPageNumber(e.target.value)}
-                    className="w-10 h-10 text-center bg-transparent"
+                    className="w-10 h-10 text-center light:bg-transparent dark:bg-transparent retro:bg-fuchsia-950"
                     defaultValue={pageNumber}
                   ></input>
                 </PaginationLink>
@@ -78,7 +78,7 @@ export default function RecentSongs() {
       {recentSongs?.map((songData) => (
         <div
           key={songData}
-          className=" bg-zinc-200/70 dark:bg-zinc-900/70 hover:bg-zinc-300/70 dark:hover:bg-zinc-800/70 transition duration-125 h-16 w-full my-1"
+          className=" light:bg-zinc-200/70 dark:bg-zinc-900/70 retro:bg-fuchsia-950/70 light:hover:bg-zinc-300/70 dark:hover:bg-zinc-800/70 retro:hover:bg-fuchsia-900/70 transition duration-125 h-16 w-full my-1"
         >
           {songData ? (
             <div className="flex h-full w-full items-center justify-between px-2">
@@ -127,7 +127,7 @@ export default function RecentSongs() {
               <div >
                 {songData.loved === "1" ? (
                   <svg
-                    className="h-6 w-6 fill-red-600"
+                    className="h-6 w-6 light:fill-red-600 dark:fill-red-600 retro:fill-green-500"
                     height="800px"
                     width="800px"
                     fill="currentColor"

@@ -3,11 +3,11 @@ import Link from "next/link"
 export function Footer() {
   return (
     <div className="h-16 relative items-center space-x-2 justify-center inset-x-0 flex">
-      <div className="text-zinc-400">yes, I did play Celeste</div>
+      <div className="light:text-zinc-400 dark:text-zinc-400 retro:text-green-500 text-lg">yes, I did play Celeste</div>
       <div>
         <Link href="https://github.com/rh-35" target="_blank">
           <svg
-            className="h-6 w-6 fill-zinc-400"
+            className="h-6 w-6 light:fill-zinc-400 dark:fill-zinc-400 retro:fill-green-500"
             fill="currentColor"
             viewBox="0 0 24 24"
           >
@@ -22,7 +22,7 @@ export function Footer() {
       <div>
         <Link href="https://last.fm/user/rh35" target="_blank">
           <svg
-            className="h-6 w-6 fill-zinc-400"
+            className="h-6 w-6 light:fill-zinc-400 dark:fill-zinc-400 retro:fill-green-500"
             fill="currentColor"
             viewBox="0 0 32 32"
           >

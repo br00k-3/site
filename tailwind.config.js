@@ -1,4 +1,4 @@
-const plugin = require('tailwindcss-textshadow')
+const colors = require("tailwindcss/colors");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -18,6 +18,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-geist_sans)'],
+        mono: ['var(--font-vcr)'],
+      },
       keyframes: {
         flicker: {
           "0%": {
@@ -165,12 +169,39 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       blur: {
-        xs: '.75px',
+        xs: '.75px', 
       },
     },
   },
   plugins: [
     require("tailwindcss-animate"),
-    require('tailwindcss-textshadow')
+    require('tailwindcss-textshadow'),
+    require('tailwindcss-themer')
+    ({
+      defaultTheme: {
+        extend: {
+          // colors is used here for demonstration purposes
+          colors: {
+            primary: 'red'
+          }
+        }
+      },
+      themes: [
+        {
+          name: 'retro',
+          extend: {
+            colors: {
+            }
+          }
+        },
+        {
+          name: 'light',
+          extend: {
+            colors: {
+            }
+          }
+        },
+      ]
+    }),
   ],
 }

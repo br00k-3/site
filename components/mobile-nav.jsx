@@ -14,7 +14,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { MenuIcon, MoonIcon, SunIcon, SunMoonIcon } from "lucide-react";
+import {
+  MenuIcon,
+  MoonIcon,
+  SunIcon,
+  SunMoonIcon,
+  VideotapeIcon,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 export function MobileNav() {
   const { setTheme, theme } = useTheme();
@@ -26,6 +32,9 @@ export function MobileNav() {
       setTheme("system");
     }
     if (theme == "system") {
+      setTheme("retro");
+    }
+    if (theme == "retro") {
       setTheme("dark");
     }
   }
@@ -36,12 +45,12 @@ export function MobileNav() {
           <Button
             variant="outline"
             size="icon"
-            className="rounded-lg dark:bg-black"
+            className="light:rounded-lg dark:rounded-lg retro:rounded-none light:bg-white dark:bg-black retro:bg-zinc-900 light:border-zinc-200 dark:border-zinc-800 retro:border-cyan-500"
           >
             <MenuIcon className="h-6 w-6" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-auto">
+        <DropdownMenuContent className="w-auto light:bg-white dark:bg-black retro:bg-fuchsia-950 light:rounded-lg dark:rounded-lg retro:rounded-none light:border-zinc-200 dark:border-zinc-700 retro:border-none light:text-black dark:text-white retro:text-green-500">
           <DropdownMenuItem>
             <Link
               href="/resume"
@@ -82,8 +91,17 @@ export function MobileNav() {
                   </>
                 ) : (
                   <>
-                    <SunMoonIcon className="mr-3" />
-                    System
+                    {theme === "retro" ? (
+                      <>
+                        <VideotapeIcon className="mr-3" />
+                        Retro
+                      </>
+                    ) : (
+                      <>
+                        <SunMoonIcon className="mr-3" />
+                        System
+                      </>
+                    )}
                   </>
                 )}
               </>
