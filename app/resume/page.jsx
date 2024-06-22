@@ -6,13 +6,13 @@ export default function resume() {
         <div className="text-center">
           <p>
             PDF copy can be found{" "}
-            <Link href="/resume.pdf" className="text-zinc-400 underline">
+            <Link href="/resume.pdf" className="light:text-zinc-400 dark:text-zinc-400 retro:text-green-500 underline">
               here
             </Link>
           </p>
         </div>
         <div className="text-center">
-          <p className="text-3xl font-bold">Brooke Milberg</p>
+          <p className="text-3xl font-bold light:not-italic dark:not-italic retro:italic">Brooke Milberg</p>
           <p className=""> Portland OR</p>
           <p className="">brookemilberg@gmail.com</p>
         </div>

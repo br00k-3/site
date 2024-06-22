@@ -33,7 +33,7 @@ export function Showcase() {
               <div key={showcaseItem.title}>
                 <Image
                   onClick={() => handleOpen(showcaseItem)}
-                  className="rounded-md md:rounded-2xl mt-3 md:mt-6 cursor-pointer"
+                  className="light:rounded-md light:md:rounded-2xl dark:rounded-md dark:md:rounded-2xl retro:rounded-none mt-3 md:mt-6 cursor-pointer"
                   src={showcaseItem.path}
                   quality={100}
                   placeholder="blur"
@@ -50,7 +50,7 @@ export function Showcase() {
               <div key={showcaseItem.title}>
                 <Image
                   onClick={() => handleOpen(showcaseItem)}
-                  className="rounded-md md:rounded-2xl mt-3 md:mt-6 cursor-pointer"
+                  className="light:rounded-md light:md:rounded-2xl dark:rounded-md dark:md:rounded-2xl retro:rounded-none mt-3 md:mt-6 cursor-pointer"
                   src={showcaseItem.path}
                   quality={100}
                   height={0}

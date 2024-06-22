@@ -6,8 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function page() {
   return (
     <div>
-      <p className="text-3xl font-semibold">Music Stats</p>
-      <p className="text-zinc-400">Data taken from Last.fm</p>
+      <p className="text-3xl font-semibold light:not-italic dark:not-italic retro:italic">Music Stats</p>
+      <p className="light:text-zinc-400 dark:text-zinc-400 retro:text-green-500 text-lg">Data taken from Last.fm</p>
       <Tabs defaultValue="Recent Listens" className="w-full">
         <TabsList>
           <TabsTrigger value="Recent Listens">Recent Listens</TabsTrigger>
