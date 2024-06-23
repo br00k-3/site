@@ -63,7 +63,7 @@ export default function RecentSongs() {
                   <input
                     value={inputtedPageNUmber}
                     onChange={(e) => setPageNumber(e.target.value)}
-                    className="w-10 h-10 text-center light:bg-transparent dark:bg-transparent retro:bg-fuchsia-950"
+                    className="w-10 h-10 text-center bg-transparent"
                     defaultValue={pageNumber}
                   ></input>
                 </PaginationLink>
@@ -82,8 +82,8 @@ export default function RecentSongs() {
         >
           {songData ? (
             <div className="flex h-full w-full items-center justify-between px-2">
-              <div className="flex md:justify-start space-x-4">
-                <div className="shrink-0 h-12 w-12">
+              <div className="flex w-full space-x-3">
+                <div className="flex shrink-0 h-12 w-12">
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
@@ -104,50 +104,29 @@ export default function RecentSongs() {
                     </Tooltip>
                   </TooltipProvider>
                 </div>
-                <div className="flex flex-col md:flex-row justify-center w-full items-start">
-                  <div className="w-64 lg:w-96 md:self-center">
+                <div className="flex w-full">
+                <div className="grid grid-flow-row grid-rows-2 grid-cols-1 lg:grid-flow-col lg:grid-rows-1 lg:grid-cols-2 w-full h-12 self-center md:text-lg font-semibold">
+                  <div className="self-center text-fuchsia-600 hover:underline">
                     <Link
-                      href={songData.url}
-                      className="text-fuchsia-600 text-xs md:text-md lg:text-lg text-start font-semibold hover:underline"
-                    >
-                      {songData.name}
+                      href={songData.url}>
+                      <p className="truncate">{songData.name}</p>
                     </Link>
                   </div>
-                  <div className="flex md:w-40 lg:w-64 2xl:w-max text-zinc-400 text-xs lg:text-lg md:self-center font-semibold">
+                  <div className="self-center">
                     <Link
-                      href={songData.artist.url}
-                      className="text-cyan-600 text-xs md:text-md lg:text-lg text-start font-semibold hover:underline"
-                    >
-                      {songData.artist.name}
+                      href={songData.artist.url}>
+                      <p className="truncate text-cyan-500 hover:underline">{songData.artist.name}</p>
                     </Link>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-center">
-              <div >
-                {songData.loved === "1" ? (
-                  <svg
-                    className="h-6 w-6 light:fill-red-600 dark:fill-red-600 retro:fill-green-500"
-                    height="800px"
-                    width="800px"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5.36129 3.46995C6.03579 3.16081 6.76287 3 7.50002 3C8.23718 3 8.96425 3.16081 9.63875 3.46995C10.3129 3.77893 10.9185 4.22861 11.4239 4.78788C11.7322 5.12902 12.2678 5.12902 12.5761 4.78788C13.5979 3.65726 15.0068 3.00001 16.5 3.00001C17.9932 3.00001 19.4021 3.65726 20.4239 4.78788C21.4427 5.91515 22 7.42425 22 8.9792C22 10.5342 21.4427 12.0433 20.4239 13.1705L14.2257 20.0287C13.0346 21.3467 10.9654 21.3467 9.77429 20.0287L3.57613 13.1705C3.07086 12.6115 2.67474 11.9531 2.40602 11.2353C2.13731 10.5175 2 9.75113 2 8.9792C2 8.20728 2.13731 7.44094 2.40602 6.72315C2.67474 6.00531 3.07086 5.34694 3.57613 4.78788C4.08157 4.22861 4.68716 3.77893 5.36129 3.46995Z"></path>
-                  </svg>
-                ) : (
-                  <span />
-                )}
-              </div>
-              <div className="justify-end hidden sm:block">
-                <div className="w-36 h-auto text-end text-xs">
+                </div>
+                <div className="w-36 self-center text-end text-xs text-nowrap hidden sm:block">
                   {songData["@attr"]?.nowplaying ? (
-                    <span className="text-wrap">Now Playing</span>
+                    <span>Now Playing</span>
                   ) : (
-                    <span className="text-wrap">{songData.date["#text"]}</span>
+                    <span>{songData.date["#text"]}</span>
                   )}
                 </div>
-              </div>
               </div>
             </div>
           ) : (

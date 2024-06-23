@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
-import { Moon, Sun, SunMoonIcon, VideotapeIcon } from "lucide-react";
+import {useState, useEffect} from "react";
+import { MoonIcon, SunIcon, SunMoonIcon, VideotapeIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,14 @@ import {
 export function ThemeSwitcher() {
   const { setTheme, theme } = useTheme();
   
+  const [icon, setIcon] = useState(<div/>)
+useEffect(() => {
+   if (theme == "dark") {setIcon(<MoonIcon />)}
+  else if (theme == "light") {setIcon(<SunIcon />)}
+  else if (theme == "system") {setIcon(<SunMoonIcon />)}
+  else if (theme == "retro") {setIcon( <VideotapeIcon />)}
+}, [theme]);
+ 
 
   return (
     <DropdownMenu>
@@ -22,12 +30,9 @@ export function ThemeSwitcher() {
         <Button
           variant="outline"
           size="icon"
-          className="light:rounded-full dark:rounded-full retro:rounded-none light:bg-white dark:bg-black retro:bg-zinc-900 light:border-none dark:border-none retro:border-cyan-500"
+          className="light:rounded-full dark:rounded-full retro:rounded-none light:bg-white dark:bg-black retro:bg-black retro:hover:bg-fuchsia-950/70 light:border-none dark:border-none retro:border-cyan-500"
         >
-          {theme == "dark" && <Moon />}
-          {theme == "light" && <Sun />}
-          {theme == "system" && <SunMoonIcon />}
-          {theme == "retro" && <VideotapeIcon />}
+          {icon}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -44,9 +49,9 @@ export function ThemeSwitcher() {
           System
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("retro")}>
-          <span className="bg-gradient-to-r from-fuchsia-600 to-cyan-500 inline-block text-transparent bg-clip-text">
+          <p className="bg-gradient-to-r from-fuchsia-600 to-cyan-500 inline-block text-transparent bg-clip-text">
             Retro
-          </span>
+          </p>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

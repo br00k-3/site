@@ -20,19 +20,19 @@ export function Navbar() {
                             className="flex items-center space-x-3 rtl:space-x-reverse"
                         >
                             <Image
-                                className="border-2 border-fuchsia-600 light:rounded-full dark:rounded-full h-9 w-9"
+                                className="border-2 border-fuchsia-600 light:rounded-full dark:rounded-full h-10 w-10"
                                 src="/images/icon.png"
                                 width="250"
                                 height="250"
                                 alt="Icon"
                                 quality={100}
                             />
-                            <span className="retro:animate-crt bg-gradient-to-r from-fuchsia-600 to-cyan-500 inline-block text-transparent bg-clip-text text-nowrap text-center text-2xl font-bold">
+                            <span className="light:animate-none dark:animate-none retro:animate-crt bg-gradient-to-r from-fuchsia-600 to-cyan-500 inline-block text-transparent bg-clip-text text-nowrap text-center text-2xl font-bold">
                                 Brooke Milberg
                             </span>
                         </Link>
                     </div>
-                    <div className="hidden sm:block">
+                    <div className="hidden md:block">
                         <div className="justify-right text-xl flex items-center font-semibold text-nowrap space-x-3">
                             <Link
                                 href="/resume"
@@ -55,7 +55,7 @@ export function Navbar() {
                             <ThemeSwitcher />
                         </div>
                     </div>
-                    <div className="sm:hidden">
+                    <div className="md:hidden">
                         <MobileNav/>
                     </div>
                 </nav>
