@@ -28,7 +28,7 @@ const vcr = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geist_sans.variable} ${vcr.variable}`}>
-      <body className="flex-col h-full w-screen overflow-x-hidden light:bg-white dark:bg-black retro:bg-black light:text-black dark:text-white retro:text-cyan-500 retro:font-semibold">
+      <body className="flex-col h-screen w-screen overflow-x-hidden light:bg-white dark:bg-black retro:bg-black light:text-black dark:text-white retro:text-cyan-500 retro:font-semibold">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -36,16 +36,16 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Crt>
-          <div className="mt-20">
+          <div className="h-full pt-20">
             <Navbar />
-            <div className="pt-8">
+            <div className="h-full pt-8">
               <main className="h-full w-screen">
-                <div className="mx-0 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8">
+                <div className="h-full mx-0 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8">
                   {children}
+                  <Footer />
                 </div>
               </main>
             </div>
-            <Footer />
             <Analytics />
             <SpeedInsights />
           </div>
