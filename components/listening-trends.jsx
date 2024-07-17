@@ -16,7 +16,7 @@ export default function ListeningTrends() {
 
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
-    const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=rh35&api_key=a913164493401f53c8d45663376ac493&limit=10&&format=json`;
+    const url = `https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=rh35&api_key=ff95da2875a6deda2192193836bf8f3a&limit=10&&format=json`;
 
     fetch(url)
       .then((response) => response.json())
