@@ -33,7 +33,7 @@ export default function RecentSongs() {
 
   useEffect(() => {
     // useEffect is a function that runs code every time the component is hydrated (built). also ensures it only runs in the browser
-    const url = `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=ff95da2875a6deda2192193836bf8f3a&limit=10&page=${pageNumber}&format=json&extended=true`;
+    const url = `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=rh35&api_key=${process.env.NEXT_PUBLIC_LAST_FM_KEY}&limit=10&page=${pageNumber}&format=json&extended=true`;
 
     fetch(url)
       .then((response) => response.json())
