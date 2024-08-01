@@ -21,7 +21,7 @@ export const metadata = {
     description:
       "A sound tech with a passion",
     images: ["/images/icon.png"],
-  }
+  },
 };
 
 const geist_sans = localFont({
@@ -42,6 +42,9 @@ const vcr = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geist_sans.variable} ${vcr.variable}`}>
+      <head>
+      <meta name="google-site-verification" content="58uATzaMs1d9CTrPqgAoD_6VZC-uCGxaA8AK3qD7XEc" />
+      </head>
       <body className="flex-col h-screen w-screen overflow-x-hidden light:bg-white dark:bg-black retro:bg-black light:text-black dark:text-white retro:text-cyan-500 retro:font-semibold">
         <ThemeProvider
           attribute="class"
