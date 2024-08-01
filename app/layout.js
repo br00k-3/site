@@ -13,14 +13,14 @@ export const metadata = {
     description:
       "A sound tech with a passion",
     type: "website",
-    images: "/social-card.png",
+    images: "/icon.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Brooke Milberg",
     description:
       "A sound tech with a passion",
-    images: ["/social-card.png"],
+    images: ["/icon.png"],
   }
 };
 
