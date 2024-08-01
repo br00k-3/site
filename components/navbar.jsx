@@ -10,10 +10,10 @@ export function Navbar() {
     return (
         <div className="w-full fixed left-0 top-0 z-40">
             <div className="hidden sm:block">
-                <div className="h-4 light:bg-white dark:bg-black retro:bg-black" />
+                <div className="h-4 light:bg-white dark:bg-black retro:bg-black"/>
             </div>
             <div className="mx-0 sm:mx-4 md:mx-16 xl:mx-48">
-                <nav className="mx-auto flex light:bg-zinc-200/70 dark:bg-zinc-900/70 retro:bg-fuchsia-950/70 h-16 w-full backdrop-blur-md items-center justify-between space-x-3 sm:light:rounded-full sm:dark:rounded-full px-4">
+                <nav className="flex light:bg-zinc-200/70 dark:bg-zinc-900/70 retro:bg-fuchsia-950/70 h-16 w-full backdrop-blur-md items-center justify-between space-x-3 sm:light:rounded-full sm:dark:rounded-full px-4">
                     <div>
                         <Link
                             href="/"

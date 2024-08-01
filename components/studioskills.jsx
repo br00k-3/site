@@ -8,9 +8,9 @@ export function Studioskills() {
         <div key={studioskillsItem.title} className="relative light:rounded-lg dark:rounded-lg light:bg-zinc-200/70 dark:bg-zinc-900/70 retro:bg-fuchsia-950/70">
           <div className=" flex-col h-auto md:h-72 lg:h-60 content-center px-4 py-4">
             <div className="flex items-center justify-center space-x-5">
-              <div className="text-3xl font-semibold">
+              <h4 className="text-3xl font-semibold">
                 {studioskillsItem.title}
-              </div>
+              </h4>
               <div className="">
                 <Image
                   className="h-16 w-auto"
@@ -24,7 +24,7 @@ export function Studioskills() {
               </div>
             </div>
             <div className="h-4" />
-            <div>{studioskillsItem.description}</div>
+            <p>{studioskillsItem.description}</p>
           </div>
         </div>
       ))}

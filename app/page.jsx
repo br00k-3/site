@@ -7,13 +7,13 @@ export default function Home() {
     <div>
       <div className="hidden sm:block h-7"/>
       <Hero />
-      <div className="text-center flex h-16 w-full text-2xl font-semibold justify-center items-center">
+      <h3 className="text-center flex h-16 w-full text-2xl font-semibold justify-center items-center">
         Live Skills
-      </div>
+      </h3>
       <Liveskills />
-      <div className="text-center flex h-16 w-full text-2xl font-semibold justify-center items-center">
+      <h3 className="text-center flex h-16 w-full text-2xl font-semibold justify-center items-center">
         Studio Skills
-      </div>
+      </h3>
       <Studioskills />
     </div>
   );
