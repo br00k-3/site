@@ -7,7 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Crt } from "@/components/crt"
 export const metadata = {
   title: "Brooke Milberg",
-  description: "What am I?",
+  description: "A sound tech with a passion, based in Portland OR",
   openGraph: {
     title: "Brooke Milberg",
     description:

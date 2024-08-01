@@ -1,5 +1,9 @@
 import { Showcase } from "@/components/showcase"
 
+export const metadata = {
+  title: "Photo Showcase",
+};
+
 export default function showcase() {
   return (
     <div>

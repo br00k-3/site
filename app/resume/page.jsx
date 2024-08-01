@@ -1,5 +1,9 @@
 import Link from "next/link"
 
+export const metadata = {
+  title: "Resume",
+};
+
 export default function resume() {
   return (
     <div>
