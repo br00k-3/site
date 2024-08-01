@@ -8,6 +8,20 @@ import { Crt } from "@/components/crt"
 export const metadata = {
   title: "Brooke Milberg",
   description: "What am I?",
+  openGraph: {
+    title: "Brooke Milberg",
+    description:
+      "A sound tech with a passion",
+    type: "website",
+    images: "/icon.png",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brooke Milberg",
+    description:
+      "A sound tech with a passion",
+    images: ["/icon.png"],
+  }
 };
 
 const geist_sans = localFont({
