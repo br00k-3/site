@@ -57,8 +57,8 @@ export default function RootLayout({ children }) {
             <Navbar />
             <div className="h-full pt-8 static">
               <main className="h-full w-screen">
-                <div className="h-full mx-0 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8">
-                  {children}
+                <div className="h-screen mx-0 sm:mx-4 md:mx-16 xl:mx-48 px-2 sm:px-8">
+                  {children }
                   <Footer />
                 </div>
               </main>
