@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image"
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
@@ -90,7 +91,7 @@ export default function RecentSongs() {
                         <Link
                           href={`${songData.artist.url}/${songData.album["#text"]}`}
                         >
-                          <img
+                          <Image
                             className=" h-12 w-12"
                             src={songData.image[3]["#text"]}
                             height={250}
