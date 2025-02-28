@@ -35,7 +35,7 @@ export function Navbar() {
                     <div className="hidden md:block">
                         <div className="justify-right text-xl flex items-center font-semibold text-nowrap space-x-3">
                             <Link
-                                href="/resume"
+                                href="https://docs.google.com/document/d/19nAkOI_kK2Eilpc1I4ezNd9bjJMPoYDa_10xcAOi3vc/edit?usp=sharing"
                                 className="hover:text-fuchsia-600 transition duration-250"
                             >
                                 Resume
