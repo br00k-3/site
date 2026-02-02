@@ -1,20 +1,25 @@
 import { Hero } from "@/components/hero";
-import { Liveskills } from "@/components/liveskills";
-import { Studioskills } from "@/components/studioskills";
+import { Services } from "@/components/services";
+import { Certifications } from "@/components/certifications";
+import { Dawskills } from "@/components/daw-skills";
 
 export default function Home() {
   return (
     <div>
-      <div className="hidden sm:block h-7"/>
+      <div className="hidden sm:block h-7" />
       <Hero />
-      <h3 className="text-center flex h-16 w-full text-2xl font-semibold justify-center items-center">
-        Live Skills
+      <div className="text-center flex h-16 w-full text-3xl font-semibold justify-center items-center">
+        Services
+      </div>
+      <Services />
+      <h3 className=" pt-4 text-center flex h-16 w-full text-3xl font-semibold justify-center items-center">
+        Certifications
       </h3>
-      <Liveskills />
+      <Certifications />
       <h3 className="text-center flex h-16 w-full text-2xl font-semibold justify-center items-center">
-        Studio Skills
+        Digital Audio Workstations
       </h3>
-      <Studioskills />
+      <Dawskills />
     </div>
   );
 }

@@ -53,6 +53,14 @@ export function MobileNav() {
         <DropdownMenuContent className="w-auto light:bg-white dark:bg-black retro:bg-fuchsia-950 light:rounded-lg dark:rounded-lg retro:rounded-none light:border-zinc-200 dark:border-zinc-700 retro:border-none light:text-black dark:text-white retro:text-green-500">
           <DropdownMenuItem>
             <Link
+              href="mailto:brookemilberg@gmail.com"
+              className="hover:text-fuchsia-600 transition duration-250"
+            >
+              Contact
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link
               href="/resume"
               className="hover:text-fuchsia-600 transition duration-250"
             >
@@ -61,18 +69,10 @@ export function MobileNav() {
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Link
-              href="/showcase"
+              href="/photos"
               className="hover:text-fuchsia-600 transition duration-250"
             >
-              Showcase
-            </Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            <Link
-              href="/listening-stats"
-              className="hover:text-fuchsia-600 transition duration-250"
-            >
-              Music Stats
+              Photos
             </Link>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
