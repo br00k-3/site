@@ -1,6 +1,6 @@
 "use client";
-import RecentSongs from "@/components/recent-songs";
-import ListeningTrends from "@/components/listening-trends";
+import RecentSongs from "@/components/archive/recent-songs";
+import ListeningTrends from "@/components/archive/listening-trends";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 

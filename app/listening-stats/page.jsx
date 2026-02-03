@@ -1,4 +1,4 @@
-import { MusicStats } from "@/components/music-stats";
+import { MusicStats } from "@/components/archive/music-stats";
 
 export const metadata = {
   title: "Music Stats",

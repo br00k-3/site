@@ -8,10 +8,11 @@ export function Certifications() {
       {certifications.map((certificationItem) => (
         <div
           key={certificationItem.title}
-          className="relative group light:rounded-lg dark:rounded-3xl"
+          className="relative group light:rounded-lg dark:rounded-3xl text-white"
         >
-          <div className="sm:h-36 lg:h-64 w-full overflow-hidden light:rounded-3xl dark:rounded-3xl group-hover:scale-125 group-hover:z-20 bg-zinc-900 duration-300 relative place-content-center border-zinc-200/70 group-hover:border">
+          <div className="h-32 lg:h-64 w-full overflow-hidden light:rounded-3xl dark:rounded-3xl group-hover:md:scale-125 group-hover:z-20 light:bg-zinc-200 dark:bg-zinc-900 retro:bg-fuchsia-950/70 duration-300 relative place-content-center light:border-white dark:border-zinc-200/70 group-hover:border">
             <Link href={`${certificationItem.link}`}>
+            <div className="w-full h-full absolute top-0 left-0 group-hover:bg-black/20 z-10"/>
               <Image
                 src={certificationItem.image}
                 alt={certificationItem.title}
@@ -19,7 +20,7 @@ export function Certifications() {
                 height={400}
                 className=" w-full group-hover:blur-sm"
               />
-            <div className="hidden group-hover:block absolute bottom-0 p-4 text-2xl font-semibold duration-300">
+            <div className="hidden group-hover:block absolute bottom-0 p-4 text-2xl font-semibold duration-300 z-20 h-auto w-full">
               {certificationItem.title}
             </div>
             </Link>

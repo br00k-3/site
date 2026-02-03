@@ -1,7 +1,7 @@
 import { Hero } from "@/components/hero";
-import { Services } from "@/components/services";
-import { Certifications } from "@/components/certifications";
-import { Dawskills } from "@/components/daw-skills";
+import { Services } from "@/components/home/services";
+import { Certifications } from "@/components/home/certifications";
+import { Dawskills } from "@/components/home/daw-skills";
 
 export default function Home() {
   return (

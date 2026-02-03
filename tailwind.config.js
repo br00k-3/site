@@ -22,6 +22,9 @@ module.exports = {
         sans: ['var(--font-geist_sans)'],
         mono: ['var(--font-vcr)'],
       },
+      textShadow: {
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)', // Customize this value as needed
+      },
       keyframes: {
         flicker: {
           "0%": {
