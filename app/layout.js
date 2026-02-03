@@ -41,7 +41,9 @@ const vcr = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geist_sans.variable} ${vcr.variable}`}>
+    <html lang="en" className={`${geist_sans.variable} ${vcr.variable}`}
+    suppressHydrationWarning // Idk why but this works
+     >
       <head>
       <meta name="google-site-verification" content="58uATzaMs1d9CTrPqgAoD_6VZC-uCGxaA8AK3qD7XEc" />
       </head>

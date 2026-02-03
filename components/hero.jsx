@@ -1,5 +1,11 @@
 "use client";
-import Lottie from '@lottielab/lottie-player/react';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('@lottielab/lottie-player/react'), { 
+  ssr: false,
+  loading: () => <div className="h-7 w-14 animate-pulse bg-gray-200" />
+});
+
 export function Hero() {
   return (
     <div className="flex-col text-center w-full light:not-italic dark:not-italic retro:italic">

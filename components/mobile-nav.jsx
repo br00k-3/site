@@ -41,7 +41,7 @@ export function MobileNav() {
   return (
     <div>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenuTrigger>
           <Button
             variant="outline"
             size="icon"

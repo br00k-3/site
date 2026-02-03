@@ -16,7 +16,7 @@ export function Services() {
               alt={serviceItem.title}
               width={400}
               height={400}
-              className="opacity-60 flex blur-md group-hover:blur-sm duration-300 group-hover:opacity-100 w-full translate-y-[-15%]"
+              className="opacity-60 flex blur-md group-hover:blur-sm duration-300 group-hover:opacity-100 w-full translate-y-[-15%] light:contrast-75"
             />
             <div className="absolute top-0 left-0 w-full h-full p-4 justify-start align-top ">
               <h3 className="text-2xl font-semibold mb-2">
